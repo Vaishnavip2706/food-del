@@ -34,9 +34,12 @@ app.get("/", (req, res) => res.send("API Running"));
 //db connection
 connectDB();
 
-app.listen(port, () => {
+app.listen(port,'0.0.0.0', () => {
   console.log(`Server running on http://localhost:${port}`);
 });
+
+server.keepAliveTimeout = 120 * 1000;  
+server.headersTimeout = 130 * 1000;  
 
 
 //mongodb+srv://FoodApp:Vaish1234@cluster0.g41svct.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
