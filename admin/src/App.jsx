@@ -11,7 +11,7 @@ import Orders from './pages/Orders/Orders'
 
 const App = () => {
 
-  const url = "http://localhost:4000";
+  const url = "https://food-del-backend-ik4m.onrender.com";
 
   return (
     <div>
